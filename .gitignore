@@ -3,3 +3,4 @@
 *.HEIC
 *.heic
 *.jpg
+!/demo/demo_receipt.jpg
