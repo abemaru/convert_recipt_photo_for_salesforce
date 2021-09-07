@@ -6,7 +6,6 @@ def converter(heif_path):
     jpg_path = heif_path.replace('input', 'output').replace('HEIC', 'jpg').replace('heic', 'jpg')
 
     heif_image = pyheif.read(heif_path)
-
     jpg_image = Image.frombytes(
         heif_image.mode, 
         heif_image.size, 
@@ -17,3 +16,5 @@ def converter(heif_path):
     )
 
     jpg_image.save(jpg_path, "JPEG")
+
+    return jpg_path
